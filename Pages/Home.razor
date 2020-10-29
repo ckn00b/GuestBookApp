@@ -1,0 +1,38 @@
+﻿@page "/"
+
+<div class="text-center">
+    <h1 class="display-4">Guest Book</h1>
+    <ul id="guest-list">
+        @foreach (var guest in guests)
+        {
+            // TODO: cleanup the display here
+            // more separation between fields?
+            // display in a prettier way on web page
+            // needs to be saved in a data repo
+            <li><b>@guest.DateTime</b> - @guest.Name - @guest.Message</li>
+        }
+    </ul>
+
+
+    <input placeholder="Enter your name" @bind="newGuest"/>
+    <input placeholder="Enter your message" @bind="newMessage"/>
+    <button class="btn btn-primary" @onclick="AddEntry">Add Entry</button>
+
+    @code {
+        private IList<Guest> guests = new List<Guest>();
+        private string newGuest;
+        private string newMessage;
+
+        private void AddEntry()
+        {
+            if (!string.IsNullOrWhiteSpace(newGuest))
+            {
+                guests.Add(new Guest {Name = newGuest, Message = newMessage, DateTime = DateTime.Now});
+                newGuest = string.Empty;
+                newMessage = string.Empty;
+            }
+        }
+    }
+
+    <p>Thank you for sharing this special day!</p>
+</div>
