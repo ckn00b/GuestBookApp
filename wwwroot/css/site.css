@@ -12,6 +12,10 @@ a {
   color: #0366d6;
 }
 
+table {
+  margin: 1rem auto 1rem auto;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
