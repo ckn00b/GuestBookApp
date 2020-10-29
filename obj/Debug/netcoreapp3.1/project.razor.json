@@ -12,6 +12,201 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": -744974492,
+        "Kind": "Components.Component",
+        "Name": "GuestBookApp.Shared.MainLayout",
+        "AssemblyName": "GuestBookApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "GuestBookApp.Shared.MainLayout"
+        }
+      },
+      {
+        "HashCode": 1953366307,
+        "Kind": "Components.Component",
+        "Name": "GuestBookApp.Shared.MainLayout",
+        "AssemblyName": "GuestBookApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "GuestBookApp.Shared.MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "GuestBookApp.Shared.MainLayout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -596529252,
+        "Kind": "Components.ChildContent",
+        "Name": "GuestBookApp.Shared.MainLayout.Body",
+        "AssemblyName": "GuestBookApp",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "GuestBookApp.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": -1072595743,
+        "Kind": "Components.ChildContent",
+        "Name": "GuestBookApp.Shared.MainLayout.Body",
+        "AssemblyName": "GuestBookApp",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "GuestBookApp.Shared.MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "GuestBookApp.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -32749657,
+        "Kind": "Components.Component",
+        "Name": "GuestBookApp.Shared.NavMenu",
+        "AssemblyName": "GuestBookApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "GuestBookApp.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -35391924,
+        "Kind": "Components.Component",
+        "Name": "GuestBookApp.Shared.NavMenu",
+        "AssemblyName": "GuestBookApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "GuestBookApp.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "GuestBookApp.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1440117096,
+        "Kind": "Components.Component",
+        "Name": "GuestBookApp.Pages.Home",
+        "AssemblyName": "GuestBookApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "GuestBookApp.Pages.Home"
+        }
+      },
+      {
+        "HashCode": 1082517168,
+        "Kind": "Components.Component",
+        "Name": "GuestBookApp.Pages.Home",
+        "AssemblyName": "GuestBookApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "GuestBookApp.Pages.Home"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "GuestBookApp.Pages.Home",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -51072219,
+        "Kind": "Components.Component",
+        "Name": "GuestBookApp.App",
+        "AssemblyName": "GuestBookApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "GuestBookApp.App"
+        }
+      },
+      {
+        "HashCode": -1728908782,
+        "Kind": "Components.Component",
+        "Name": "GuestBookApp.App",
+        "AssemblyName": "GuestBookApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "GuestBookApp.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "GuestBookApp.App",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 2012882598,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView",
@@ -14392,19 +14587,14 @@
   "RootNamespace": "GuestBookApp",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\chris\\dev\\GuestBookApp\\Pages\\_ViewImports.cshtml",
-      "TargetPath": "Pages\\_ViewImports.cshtml",
-      "FileKind": "mvc"
+      "FilePath": "c:\\Users\\chris\\dev\\GuestBookApp\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
     },
     {
-      "FilePath": "c:\\Users\\chris\\dev\\GuestBookApp\\Pages\\Index.cshtml",
-      "TargetPath": "Pages\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\chris\\dev\\GuestBookApp\\Pages\\Privacy.cshtml",
-      "TargetPath": "Pages\\Privacy.cshtml",
-      "FileKind": "mvc"
+      "FilePath": "c:\\Users\\chris\\dev\\GuestBookApp\\Shared\\MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
     },
     {
       "FilePath": "c:\\Users\\chris\\dev\\GuestBookApp\\Pages\\Error.cshtml",
@@ -14412,19 +14602,24 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\chris\\dev\\GuestBookApp\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\chris\\dev\\GuestBookApp\\Pages\\_Host.cshtml",
+      "TargetPath": "Pages\\_Host.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\chris\\dev\\GuestBookApp\\Pages\\Shared\\_Layout.cshtml",
-      "TargetPath": "Pages\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
+      "FilePath": "c:\\Users\\chris\\dev\\GuestBookApp\\Pages\\Home.razor",
+      "TargetPath": "Pages\\Home.razor",
+      "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\chris\\dev\\GuestBookApp\\Pages\\_ViewStart.cshtml",
-      "TargetPath": "Pages\\_ViewStart.cshtml",
-      "FileKind": "mvc"
+      "FilePath": "c:\\Users\\chris\\dev\\GuestBookApp\\Shared\\NavMenu.razor",
+      "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\chris\\dev\\GuestBookApp\\App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
     }
   ],
   "SerializationFormat": "0.2"
