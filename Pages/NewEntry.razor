@@ -1,0 +1,38 @@
+@page "/NewEntry"
+
+<div>
+    <input placeholder="Enter your name" @bind="Name"/>
+    <input placeholder="Enter your message" @bind="Message"/>
+    <button class="btn btn-primary" @onclick="AddEntry">Submit</button>
+</div>
+
+@code {
+
+    [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set;}
+
+    bool ShowForm { get; set; } = true;
+    string Name { get; set; }
+    string Message { get; set; }
+    
+    void AddEntry()
+    {
+        BlazoredModal.Close(ModalResult.Ok($"Entry added successfully."));
+    }
+
+}
+
+@* @code {
+        private IList<Guest> Guests = new List<Guest>();
+        private string newGuest;
+        private string newMessage;
+
+        private void AddEntry()
+        {
+            if (!string.IsNullOrWhiteSpace(newGuest))
+            {
+                Guests.Add(new Guest {Name = newGuest, Message = newMessage, DateTime = DateTime.Now});
+                newGuest = string.Empty;
+                newMessage = string.Empty;
+            }
+        }
+    } *@
