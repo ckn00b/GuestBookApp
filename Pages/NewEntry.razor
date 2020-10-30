@@ -1,9 +1,17 @@
 @page "/NewEntry"
 
 <div>
-    <input placeholder="Enter your name" @bind="Name"/>
-    <input placeholder="Enter your message" @bind="Message"/>
-    <button class="btn btn-primary" @onclick="AddEntry">Submit</button>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Enter your name" @bind="Name"/>
+    </div>
+    <div>
+        <label for="message">Message:</label>
+        <input type="text" placeholder="Enter your message" @bind="Message"/>
+    </div>
+    <div>
+        <button class="btn btn-primary" @onclick="AddEntry">Submit</button>
+    </div>
 </div>
 
 @code {
