@@ -1,9 +1,10 @@
 ﻿@page "/"
+@* @inject IModalService modal *@
 
 <div class="text-center">
     <h1 class="display-4">Guest Book</h1>
     <ul id="guest-list">
-        @foreach (var guest in guests)
+        @foreach (var guest in Guests)
         {
             // TODO: cleanup the display here
             // more separation between fields?
@@ -13,26 +14,28 @@
         }
     </ul>
 
-
-    <input placeholder="Enter your name" @bind="newGuest"/>
-    <input placeholder="Enter your message" @bind="newMessage"/>
-    <button class="btn btn-primary" @onclick="AddEntry">Add Entry</button>
-
-    @code {
-        private IList<Guest> guests = new List<Guest>();
-        private string newGuest;
-        private string newMessage;
-
-        private void AddEntry()
-        {
-            if (!string.IsNullOrWhiteSpace(newGuest))
-            {
-                guests.Add(new Guest {Name = newGuest, Message = newMessage, DateTime = DateTime.Now});
-                newGuest = string.Empty;
-                newMessage = string.Empty;
-            }
-        }
-    }
+    <button class="btn btn-primary" @onclick="@(()=>ShowNewEntry())">Add Entry</button>
 
     <p>Thank you for sharing this special day!</p>
 </div>
+
+@code {
+        private IList<Guest> Guests = new List<Guest>();
+
+        [CascadingParameter] public IModalService Modal { get; set; }
+
+        async Task ShowNewEntry()
+        {
+            var formModal = Modal.Show<NewEntry>("New Entry");
+            var result = await formModal.Result;
+
+            if (result.Cancelled)
+            {
+                Console.WriteLine("Modal was cancelled.");
+            }
+            else
+            {
+                Console.WriteLine(result.Data);
+            }
+        }
+    }
