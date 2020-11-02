@@ -1,7 +1,7 @@
 @page "/NewEntry"
 
-<div>
-    <div>
+<div id="entry-modal">
+    <div class="table-row">
         <label for="name">Name:</label>
         <input type="text" placeholder="Enter your name" @bind="Name"/>
     </div>
@@ -30,7 +30,7 @@
 }
 
 @* @code {
-        private IList<Guest> Guests = new List<Guest>();
+        private List<Guest> Guests = new List<Guest>();
         private string newGuest;
         private string newMessage;
 
