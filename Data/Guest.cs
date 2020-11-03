@@ -4,8 +4,8 @@ namespace GuestBookApp.Data
 {
     public class Guest
     {
-        public string Name { get; set; }
-        public string Message { get; set; }
-        public DateTime DateTime { get; set; }
+        public string GuestName { get; set; }
+        public string GuestMessage { get; set; }
+        public DateTime GuestDateTime { get; set; }
     }
 }

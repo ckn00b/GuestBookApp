@@ -8,8 +8,17 @@ a, .btn-link {
     color: #0366d6;
 }
 
-table{
-    margin: 1rem auto;
+label {
+    display: table-cell;
+    text-align: right;
+}
+
+input {
+    display: table-cell;
+}
+
+div.row {
+    display: table-row;
 }
 
 #guest-list {
@@ -20,6 +29,7 @@ table{
     color: #fff;
     background-color: #1b6ec2;
     border-color: #1861ac;
+    margin: 1rem auto;
 }
 
 app {

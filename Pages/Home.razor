@@ -1,16 +1,12 @@
 ﻿@page "/"
-@* @inject IModalService modal *@
 
 <div class="text-center">
     <h1 class="display-4">Guest Book</h1>
     <ul id="guest-list">
-        @foreach (var guest in Guests)
+        @foreach (Guest guest in Guests)
         {
-            // TODO: cleanup the display here
-            // more separation between fields?
-            // display in a prettier way on web page
-            // needs to be saved in a data repo
-            <li><b>@guest.DateTime</b> - @guest.Name - @guest.Message</li>
+            // List doesn't appear after being input on NewEntry.razor
+            <li><b>@guest.GuestDateTime</b> - @guest.GuestName - @guest.GuestMessage</li>
         }
     </ul>
 
@@ -20,7 +16,7 @@
 </div>
 
 @code {
-        private IList<Guest> Guests = new List<Guest>();
+        private List<Guest> Guests = new List<Guest>();
 
         [CascadingParameter] public IModalService Modal { get; set; }
 
@@ -35,7 +31,15 @@
             }
             else
             {
-                Console.WriteLine(result.Data);
+                foreach (Guest guest in Guests)
+                {
+                    Guests.Add(new Guest() 
+                    {
+                        GuestName = guest.GuestName,
+                        GuestMessage = guest.GuestMessage,
+                        GuestDateTime = guest.GuestDateTime
+                    });
             }
         }
     }
+}
