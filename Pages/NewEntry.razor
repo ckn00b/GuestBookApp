@@ -15,32 +15,22 @@
 </div>
 
 @code {
+        
+        [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set;}
+        public List<Guest> Guests = new List<Guest>();
 
-    [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set;}
-
-    bool ShowForm { get; set; } = true;
-    string Name { get; set; }
-    string Message { get; set; }
-    
-    void AddEntry()
-    {
-        BlazoredModal.Close(ModalResult.Ok($"Entry added successfully."));
-    }
-
-}
-
-@* @code {
-        private List<Guest> Guests = new List<Guest>();
-        private string newGuest;
-        private string newMessage;
-
-        private void AddEntry()
+        bool ShowForm { get; set; } = true;
+        public string Name { get; set; }
+        public string Message { get; set; }
+        
+        public void AddEntry()
         {
-            if (!string.IsNullOrWhiteSpace(newGuest))
-            {
-                Guests.Add(new Guest {Name = newGuest, Message = newMessage, DateTime = DateTime.Now});
-                newGuest = string.Empty;
-                newMessage = string.Empty;
-            }
+            Guest newGuest = new Guest();
+            newGuest.GuestName = Name;
+            newGuest.GuestMessage = Message;
+            newGuest.GuestDateTime = DateTime.Now;
+            Guests.Add(newGuest);
+            
+            BlazoredModal.Close(ModalResult.Ok($"{newGuest.GuestDateTime} - {newGuest.GuestName}: {newGuest.GuestMessage}"));
         }
-    } *@
+}
