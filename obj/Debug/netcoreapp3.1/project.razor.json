@@ -12,68 +12,35 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 1782460200,
+        "HashCode": -51072219,
         "Kind": "Components.Component",
-        "Name": "GuestBookApp.Pages.NewEntry",
+        "Name": "GuestBookApp.App",
         "AssemblyName": "GuestBookApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NewEntry"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "GuestBookApp.Pages.NewEntry"
+          "Common.TypeName": "GuestBookApp.App"
         }
       },
       {
-        "HashCode": 1828855588,
+        "HashCode": -1728908782,
         "Kind": "Components.Component",
-        "Name": "GuestBookApp.Pages.NewEntry",
+        "Name": "GuestBookApp.App",
         "AssemblyName": "GuestBookApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "GuestBookApp.Pages.NewEntry"
+            "TagName": "GuestBookApp.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "GuestBookApp.Pages.NewEntry",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1440117096,
-        "Kind": "Components.Component",
-        "Name": "GuestBookApp.Pages.Home",
-        "AssemblyName": "GuestBookApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Home"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "GuestBookApp.Pages.Home"
-        }
-      },
-      {
-        "HashCode": 1082517168,
-        "Kind": "Components.Component",
-        "Name": "GuestBookApp.Pages.Home",
-        "AssemblyName": "GuestBookApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "GuestBookApp.Pages.Home"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "GuestBookApp.Pages.Home",
+          "Common.TypeName": "GuestBookApp.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -203,39 +170,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "GuestBookApp.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -51072219,
-        "Kind": "Components.Component",
-        "Name": "GuestBookApp.App",
-        "AssemblyName": "GuestBookApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "GuestBookApp.App"
-        }
-      },
-      {
-        "HashCode": -1728908782,
-        "Kind": "Components.Component",
-        "Name": "GuestBookApp.App",
-        "AssemblyName": "GuestBookApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "GuestBookApp.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "GuestBookApp.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

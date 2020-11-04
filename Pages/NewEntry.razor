@@ -15,32 +15,28 @@
 </div>
 
 @code {
+        
+        [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set;}
 
-    [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set;}
+        public List<Guest> Guests = new List<Guest>();
 
-    bool ShowForm { get; set; } = true;
-    string Name { get; set; }
-    string Message { get; set; }
-    
-    void AddEntry()
-    {
-        BlazoredModal.Close(ModalResult.Ok($"Entry added successfully."));
-    }
-
-}
-
-@* @code {
-        private List<Guest> Guests = new List<Guest>();
-        private string newGuest;
-        private string newMessage;
-
-        private void AddEntry()
+        bool ShowForm { get; set; } = true;
+        public string Name { get; set; }
+        public string Message { get; set; }
+        
+        public void AddEntry()
         {
-            if (!string.IsNullOrWhiteSpace(newGuest))
-            {
-                Guests.Add(new Guest {Name = newGuest, Message = newMessage, DateTime = DateTime.Now});
-                newGuest = string.Empty;
-                newMessage = string.Empty;
-            }
+            Guest newGuest = new Guest();           // This chunk works to display the info on console,
+            newGuest.GuestName = Name;                // but doesn't actually update the list
+            newGuest.GuestMessage = Message;
+            newGuest.GuestDateTime = DateTime.Now;
+            Guests.Add(newGuest);
+            Console.WriteLine(Guests.Count);
+            BlazoredModal.Close(ModalResult.Ok($"{newGuest.GuestDateTime} - {newGuest.GuestName}: {newGuest.GuestMessage}"));
+
+            //Guests.Add(new Guest()
+            //{ GuestName=Name, GuestMessage=Message, GuestDateTime=DateTime.Now }); //This chunk isn't showing anything presently
+            //Console.WriteLine(Guests.Count);
+            //BlazoredModal.Close();//ModalResult.Ok($"{newGuest.GuestDateTime} - {newGuest.GuestName}: {newGuest.GuestMessage}"));           
         }
-    } *@
+}
