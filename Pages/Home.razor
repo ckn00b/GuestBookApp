@@ -2,22 +2,21 @@
 
 <div class="text-center">
     <h1 class="display-4">Guest Book</h1>
+    <p>Please add a message!</p>
+    <button class="btn btn-primary" @onclick="@(()=>ShowNewEntry())">Add Entry</button>
     <ul id="guest-list">
-        @foreach (Guest guest in Guests)
+        @foreach (var guest in GuestList)
         {
-            // Needs to reference the result.Data, currently being written to Console
-            <li><b>@guest.GuestDateTime</b> - @guest.GuestName - @guest.GuestMessage</li>
+            <li>@guest</li>
         }
     </ul>
-
-    <button class="btn btn-primary" @onclick="@(()=>ShowNewEntry())">Add Entry</button>
 
     <p>Thank you for sharing this special day!</p>
 </div>
 
 @code {
         [CascadingParameter] public IModalService Modal { get; set; }
-        public List<Guest> Guests = new List<Guest>();
+        public List<Guest> GuestList = new List<Guest>();
 
         async Task ShowNewEntry()
         {
@@ -30,8 +29,7 @@
             }
             else
             {
-                
-               Console.WriteLine(result.Data); // This displays the newGuest object at the Console, needs to be on Home.razor
+                Console.WriteLine(result.Data); // This displays the newGuest object at the Console, needs to be on Home.razor
             }
         }
     }
