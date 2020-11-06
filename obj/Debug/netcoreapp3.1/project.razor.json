@@ -45,6 +45,39 @@
         }
       },
       {
+        "HashCode": 1782460200,
+        "Kind": "Components.Component",
+        "Name": "GuestBookApp.Pages.NewEntry",
+        "AssemblyName": "GuestBookApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NewEntry"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "GuestBookApp.Pages.NewEntry"
+        }
+      },
+      {
+        "HashCode": 1828855588,
+        "Kind": "Components.Component",
+        "Name": "GuestBookApp.Pages.NewEntry",
+        "AssemblyName": "GuestBookApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "GuestBookApp.Pages.NewEntry"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "GuestBookApp.Pages.NewEntry",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -744974492,
         "Kind": "Components.Component",
         "Name": "GuestBookApp.Shared.MainLayout",

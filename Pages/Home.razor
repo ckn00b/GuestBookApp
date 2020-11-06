@@ -3,11 +3,12 @@
 <div class="text-center">
     <h1 class="display-4">Guest Book</h1>
     <p>Please add a message!</p>
-    <button class="btn btn-primary" @onclick="@(()=>ShowNewEntry())">Add Entry</button>
+    <button class="btn btn-primary" @onclick="AddEntry">Add Entry</button>
+    @* <NewEntry @ref="newEntry"></NewEntry> *@
     <ul id="guest-list">
-        @foreach (var guest in GuestList)
+        @foreach (Guest member in Guests)
         {
-            <li>@guest</li>
+            <li>@member.GuestDateTime @member.GuestName: @member.GuestMessage</li>
         }
     </ul>
 
@@ -15,21 +16,11 @@
 </div>
 
 @code {
-        [CascadingParameter] public IModalService Modal { get; set; }
-        public List<Guest> GuestList = new List<Guest>();
-
-        async Task ShowNewEntry()
+        List<Guest> Guests = new List<Guest>();
+        public NewEntry newEntry;
+        public List<Guest> AddEntry(List<Guest> Guests)
         {
-            var formModal = Modal.Show<NewEntry>("New Entry");
-            var result = await formModal.Result;
-
-            if (result.Cancelled)
-            {
-                Console.WriteLine("Modal was cancelled.");
-            }
-            else
-            {
-                Console.WriteLine(result.Data); // This displays the newGuest object at the Console, needs to be on Home.razor
-            }
+            Guests = newEntry.AddToGuestList(Guests, NewEntry.GetGuest());
+            return Guests;
         }
     }
